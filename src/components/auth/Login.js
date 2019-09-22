@@ -3,6 +3,7 @@ import UserContext from "../context/UserContext";
 import { Button } from "semantic-ui-react";
 import { validations } from "./authValidations";
 import AuthForm from "./AuthForm";
+import { signInUser } from "../actions/userActions";
 
 export default () => {
   const [name, updateName] = useState("");
@@ -23,7 +24,7 @@ export default () => {
     }
     setShowErrors(false);
     const body = { name, password };
-    // signInUser(body, userContext.dispatch);
+    signInUser(body, userContext.dispatch);
   };
 
   return (

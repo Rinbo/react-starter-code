@@ -4,8 +4,9 @@ import history from "../history";
 import { Button } from "semantic-ui-react";
 import { validations } from "./authValidations";
 import AuthForm from "./AuthForm";
+import { signUpUser } from "../actions/userActions";
 
-export default ({ score }) => {
+export default () => {
   const [name, updateName] = useState("");
   const [password, updatePassword] = useState("");
   const [showErrors, setShowErrors] = useState(false);
@@ -23,8 +24,8 @@ export default ({ score }) => {
       return null;
     }
     setShowErrors(false);
-    const body = { name, password, score };
-    //signUpUser(body, userContext.dispatch);
+    const body = { name, password };
+    signUpUser(body, userContext.dispatch);
   };
 
   return (
