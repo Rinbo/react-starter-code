@@ -5,7 +5,7 @@ const UserContext = createContext("user");
 
 const initialState = {
   name: "",
-  isSignedIn: flase,
+  isSignedIn: false,
   announcement: { message: "", code: 200, delay: 5000 }
 };
 

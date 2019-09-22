@@ -22,7 +22,7 @@ const routes = () => (
 
 const App = () => {
   return (
-    <div className="ui container">
+    <div className="ui container borjessons-container">
       <Router history={history}>
         <Menu />
         {routes()}

@@ -2,7 +2,6 @@ import React, { useContext, useState, useEffect } from "react";
 import UserContext from "../context/UserContext";
 import history from "../history";
 import { Button } from "semantic-ui-react";
-import { signUpUser } from "../actions/userActions";
 import { validations } from "./authValidations";
 import AuthForm from "./AuthForm";
 

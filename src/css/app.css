@@ -7,6 +7,10 @@ body {
   width: 100px;
 }
 
+.borjessons-container {
+  margin-top: 25px;
+}
+
 .borjessons-link {
   background-color: #1b1c1d;
   cursor: pointer;

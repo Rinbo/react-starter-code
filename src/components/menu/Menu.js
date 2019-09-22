@@ -1,6 +1,6 @@
-import React, { useEffect, useState, useContext } from "./node_modules/react";
+import React, { useEffect, useState, useContext } from "react";
 import UserContext from "../context/UserContext";
-import { Button, Popup } from "./node_modules/semantic-ui-react";
+import { Button, Popup } from "semantic-ui-react";
 import history from "../history";
 
 export default () => {
@@ -66,7 +66,7 @@ export default () => {
             basic
             color="green"
             className="item borjessons-link"
-            onClick={() => history.push("/login")}
+            onClick={() => history.push("/register")}
           >
             <i className="sign-in icon borjessons-icon" style={styles.icon} />
           </Button>
@@ -120,5 +120,5 @@ export default () => {
     );
   };
 
-  return renderContent;
+  return renderContent();
 };
