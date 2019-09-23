@@ -1,11 +1,11 @@
-import React, { useEffect, useState, useContext } from "react";
-import UserContext from "../context/UserContext";
+import React, { useEffect, useState } from "react";
+import { useUserContext } from "../context/UserContext";
 import { Button, Popup } from "semantic-ui-react";
 import history from "../history";
 
 export default () => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-  const userContext = useContext(UserContext);
+  const { isSignedIn } = useUserContext();
 
   const styles = {
     icon: { color: "#cccccc", backgroundColor: "#1b1c1d" }
@@ -115,7 +115,7 @@ export default () => {
           content="Link 2 tooltip"
         />
 
-        {userContext.isSignedIn ? renderUserLinks() : renderAuthLinks()}
+        {isSignedIn ? renderUserLinks() : renderAuthLinks()}
       </div>
     );
   };

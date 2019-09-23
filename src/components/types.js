@@ -1,4 +1,3 @@
-export const SET_USER = "SET_USER";
 export const UPDATE_USER = "UPDATE_USER";
 export const SIGN_IN = "SIGN_IN";
 export const SIGN_UP = "SIGN_UP";

@@ -1,10 +1,10 @@
-import React, { useReducer, createContext, useEffect } from "react";
+import React, { useReducer, createContext, useEffect, useContext } from "react";
 import { validateToken } from "../actions/userActions";
 import { userReducer, initialState } from "../reducers/userReducer";
 
-const UserContext = createContext("user");
+export const UserContext = createContext(null);
 
-export const UserProvider = props => {
+const UserProvider = props => {
   const [state, dispatch] = useReducer(userReducer, initialState);
 
   useEffect(() => {
@@ -18,4 +18,6 @@ export const UserProvider = props => {
   );
 };
 
-export default UserContext;
+export const useUserContext = () => useContext(UserContext);
+
+export default UserProvider;
