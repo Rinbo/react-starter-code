@@ -1,5 +1,5 @@
-import React, { useContext, useState, useEffect } from "react";
-import UserContext from "../context/UserContext";
+import React, { useState, useEffect } from "react";
+import {useUserContext} from "../context/UserContext";
 import { Button } from "semantic-ui-react";
 import { validations } from "./authValidations";
 import AuthForm from "./AuthForm";
@@ -10,7 +10,7 @@ export default () => {
   const [password, updatePassword] = useState("");
   const [showErrors, setShowErrors] = useState(false);
   const [errors, setErrors] = useState({});
-  const userContext = useContext(UserContext);
+  const {dispatch} = useUserContext();
 
   useEffect(() => {
     validations(name, password, setErrors);
@@ -24,7 +24,7 @@ export default () => {
     }
     setShowErrors(false);
     const body = { name, password };
-    signInUser(body, userContext.dispatch);
+    signInUser(body, dispatch);
   };
 
   return (

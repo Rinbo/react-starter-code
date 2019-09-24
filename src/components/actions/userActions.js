@@ -123,7 +123,6 @@ export const signOutUser = async userDispatch => {
 
 export const validateToken = async userDispatch => {
   try {
-    setHeaders();
     endpoint.get("/users/validatetoken").then(response => {
       localStorage.setItem("token", response.headers.token);
       userDispatch({ type: SIGN_IN, payload: response.data });
