@@ -69,7 +69,7 @@ export default () => {
               cursor: "pointer",
               textDecoration: "underline"
             }}
-            onClick={() => history.push("login")}
+            onClick={() => history.push("/login")}
           >
             Login
           </div>
