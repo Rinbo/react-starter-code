@@ -7,6 +7,7 @@ import LandingPage from "./LandingPage";
 import ShowUser from "./user/ShowUser";
 import Login from "./auth/Login";
 import Register from "./auth/Register";
+import FlashMessage from "./utility/FlashMessage";
 
 const AuthRoute = ({ component, ...options }) => {
   const { isSignedIn } = useUserContext();
@@ -33,6 +34,7 @@ const App = () => {
     <div className="ui container borjessons-container">
       <Router history={history}>
         <Menu />
+        <FlashMessage />
         {routes()}
       </Router>
     </div>
